@@ -12,3 +12,23 @@ function mostrarSenha() {
     }
 
 }
+
+let carrinho = [];
+
+document.querySelectorAll('.adicionar').forEach(button => {
+    button.addEventListener('click', () => {
+        const produto = button.parentElement;
+        const id = produto.getAttribute('data-id');
+        const nome = produto.querySelector('h3').textContent;
+        const preco = parseFloat(produto.querySelector('p:nth-of-type(2)').textContent.replace('Preço: R$ ', ''));
+
+        const item = { id, nome, preco };
+        carrinho.push(item);
+        atualizarCarrinho();
+    });
+});
+
+function atualizarCarrinho() {
+    const carrinhoCount = document.getElementById('carrinho-count');
+    carrinhoCount.textContent = carrinho.length;
+}
