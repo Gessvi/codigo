@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: inherit; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #FFE0B5;
+    color: #0FAE88;
+    padding: 20px;
+}
+
+.marronEscuro {
+    background-color: #D49B78;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 60px; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3b67d;
+    padding: 10px;
+}
+
+nav a {
+    color: #0FAE88; 
+    text-decoration: none;
+    font-size: 15px;
+    padding: 15px 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #d87e47;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.btns{
+    display: flex;
+    gap: 10px;
+}
+
+h1 {
+    color: #02542D;
+}
+
+.btn-site {
+    background-color: #0CFFC5;
+    color: black;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s, padding 0.3;
+    font-size: 13px;
+    margin-right: 20px;
+
+}
+
+.btn-sitee{
+    background-color: #0CFFC5;
+    color: black;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s, padding 0.3;
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+.btn-site:hover, .btn-sitee:hover {
+    background-color: #0FAE88;
+}
+
+.input-box-pesquisa {
+    position: relative; 
+    display: flex; 
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.pesquisar {
+    padding: 9px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+.bx-image {
+    position: absolute;
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 20px;
+    height: 20px; 
+    pointer-events: none;
+}
+
+.titulo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.titulo-principal > div{
+    flex: 1;
+}
+
+.capa-principal-esquerda, .capa-principal-direita {
+    flex: 1; 
+}
+
+.input-box-pesquisa {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pesquisar {
+    padding: 9px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+.bx-image {
+    margin-left: 10px; 
+    cursor: pointer; 
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #f3b67d; 
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
