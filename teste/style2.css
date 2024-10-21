@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+}
+nav.menu-lateral {
+    width: 50px;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0;
+    box-shadow: 3px 0 0 cadetblue;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+nav.menu-lateral.expandido {
+    width: 300px;
+}
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+    margin: 5px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 20px;
+}
+ul li.item-menu:hover{
+    background-color: cadetblue;
+    transition: 0.3s;
+}
+
+ul li.item-menu a .icon{
+    font-size: 25px;
+ }
+ .conteiner-pesquisa{
+     background-color: #202020;
+     padding: 10px;
+ }
+ .input-box-pesquisa{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.pesquisar{
+    padding: 7px 40px;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+#icon{
+    padding-top: 10px;
+    position: absolute;
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 20px;
+    height: 20px; 
+    pointer-events: none;
+}
+h1{
+    text-align: left;
+    margin: 30px;
+    padding-top: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+img {
+    position: fixed; /* Fixa a imagem em relação à janela de visualização */
+    left: 60px;      /* Distância da borda esquerda */      /* Distância do topo */
+    width: 90px;    /* Ajuste a largura conforme necessário */
+    height: auto;    /* Mantém a proporção da imagem */
+}
+
+/*Para o botão Login e Cadastro
+/*.btns {
+    background-color: #fff;
+    color: black;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s, padding 0.3;
+    font-size: 13px;
+    margin-right: 20px;
+}
+.btns:hover{
+    background-color: #ccc;
+    transition: 0.3s;
+    color: #fff;
+}
+*/
