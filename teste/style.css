@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(img/biblioteca.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*LOGIN*/
+.conteiner {
+    backdrop-filter: blur(20px);
+    padding: 30px 70px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #000;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.icon-funcionario{
+    color: white;
+    font-size: 42px;
+    text-decoration: none;
+}
+
+.conteiner-formulario{
+    backdrop-filter: blur(20px);
+    padding: 20px 45px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #000;
+    color: #fff;
+    text-align: center;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+input {
+    background-color: transparent;
+    border: none;
+}
+input::placeholder {
+    color: #ffffffce;
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+}
+.input-box {
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.input-box-email{
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.input-box-senha{
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    display: inline-block; 
+    padding: 12px 20px;
+    background-color: #fde5cf;
+    color: black; 
+    text-decoration: none; 
+    border-radius: 10px;
+    font-weight: 600;
+    border: none; 
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+} 
+.btn:hover {
+    background-color: #ffffffab; 
+}
+
+.lembrar {
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10px;
+}
+.click {
+    text-decoration: none;
+    color: #00af58;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.click:hover {
+    color: #ffffffb9;
+}
+fieldset {
+    outline: none;
+    border: none;
+}
+label {
+    text-align: left;
+}
+.inputUser:focus~.labelInput,
+.inputUser:valid~.labelInput {
+    top: -20%;
+    font-size: 12px;
+    color: #DE9151;
+}
+/*CADASTRO*/
+.input-box-cadastro {
+    border: 1px solid #fff;
+    padding: 8px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+}
+.data {
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #fff;
+    padding: 4px;
+    border-radius: 5px;
+}
+.nome-data {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.btn-recuperar{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+}
+.btn-recuperar:hover {
+    background-color: #d8c9b7ab;
+}
+.login{
+    padding: 12px;
+}
+.login > p{
+    margin: 30px;
+}
+login.html:target ~ .content #cadastro,
+formulario.html:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+ 
+formulario.html:target ~ .content #login,
+login.html:target ~ .content #cadastro{
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.icon-container {
+    position: fixed; 
+    top: 20px;
+    left: 20px; 
+    font-size: 36px; 
+    color: #fff; 
+}
