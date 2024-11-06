@@ -24,8 +24,8 @@ const produtoss = [
     { id: 20, nome: 'Mortadela', preco: 2.99, descricao: 'Mortadela Tradiciona  | 500g' },
     { id: 21, nome: 'Calabresa', preco: 1.99, descricao: 'Linguiça Calabresa  | Kg' },
     { id: 22, nome: 'Carne do Sol', preco: 1.99, descricao: 'Carne do Sol  | Kg' },
-    { id: 23, nome: 'Bacon', preco: 1.99, descricao: 'Bacon Fatiad  | Kg' },
-    { id: 24, nome: 'Costela', preco: 1.99, descricao: 'Costela Bovina  | Kg' },
+    { id: 23, nome: 'Leite Liquido', preco: 2.99, descricao: 'Leite Liquido  | 1L' },
+    { id: 24, nome: 'Leite em Pó', preco: 1.99, descricao: 'Leite em Pó  | Kg' },
 ];
 
 const produtoos = [
