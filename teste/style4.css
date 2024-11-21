@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset de margens, padding e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #E3E3E3;
+    height: 100vh;
+    padding-top: 100px; /* Evitar que o conteúdo fique oculto pelo header fixo */
+}
+
+/* Interface principal */
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*== Estilo do Header ==*/
+
+header {
+    width: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Garantir que o header fique sempre sobre o conteúdo */
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo #icon {
+    max-width: 80px;
+}
+
+header .menu-desktop nav ul {
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+/* Adicionada transição para suavizar o hover */
+header .menu-desktop nav a:hover {
+    transform: scale(1.13);
+    transition: transform 0.3s ease;
+}
+
+header .btn-login button, .hero-site button, .livro button {
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+header .btn-login button:hover, .hero-site button:hover, .livro button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/*== Estilo do Menu Lateral ==*/
+
+.btn-abrir-menu i {
+    color: #fff;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 1px 3px;
+    box-shadow: 4px 4px 15px #232323b8;
+    border: 1px solid #ffffff43;
+    border-radius: 5px;
+}
+
+.menu-lateral {
+    width: 0%;
+    height: 100%;
+    background-color: #202020;
+    padding: 10px 0;
+    box-shadow: 3px 0 0 cadetblue;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: fixed; /* Mudado para 'fixed' para garantir que o menu lateral fique fixo na tela */
+    top: 0;
+    left: 0;
+    transition: .4s;
+    z-index: 999;
+}
+
+.menu-lateral.abrir-menu {
+    width: 20%;
+}
+
+.menu-lateral.abrir-menu ~ .overlay-topo {
+    display: block;
+}
+
+.overlay-topo.mostrar {
+    display: block;
+    opacity: 1; /* Corrigido para fazer a transição de visibilidade */
+    transition: opacity 0.5s ease;
+}
+
+.menu-lateral .btn-fechar {
+    color: #ccc;
+    font-size: 50px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.menu-lateral nav ul {
+    text-align: left;
+    list-style-type: none;
+}
+
+.menu-lateral nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 12% 4%;
+}
+
+.menu-lateral nav ul li a i {
+    padding: 0 30px;
+    font-size: 35px;
+}
+
+.menu-lateral nav ul li a:hover {
+    background-color: #ff6f016d;
+    transition: 0.3s;
+}
+
+/* Menus do item dentro do overlay */
+ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+    margin: 5px;
+}
+
+/* Categoria (exemplo de dropdown) */
+.categoria {
+    position: relative;
+    display: inline-block;
+}
+
+.categoria .lista-tipos {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 25px;
+    margin-top: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.177);
+}
+
+.categoria .lista-tipos ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categoria .lista-tipos ul li {
+    display: flex;
+    font-size: 17px;
+    font-weight: 500;
+    gap: 60px;
+}
+
+.categoria:hover .lista-tipos {
+    display: block;
+    cursor: pointer;
+}
+
+.categoria .lista-tipos ul li:hover {
+    background-color: #5e5e5e61;
+    padding: 20px;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+/*== Estilo do Hero ==*/
+
+section.hero-site {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-site .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1 {
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+.hero-site .txt-hero h1 span {
+    display: block;
+    margin: 7px 0;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero p {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 7px 0;
+}
+
+.hero-site button {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* == Estilo do slide == */
+
+.content {
+    height: 100vh; /* A altura agora ocupa 100% da tela */
+    width: 100vw;  /* A largura agora ocupa 100% da tela */
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Adicionada transição suave */
+}
+
+.slide {
+    display: flex;
+    width: 300%;  /* A largura vai ser 3 vezes a largura da tela (para 3 slides) */
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100vw; /* Cada imagem vai ocupar 100% da largura da tela */
+    height: 100vh; /* Cada imagem vai ocupar 100% da altura da tela */
+}
+
+/* Navegação da barra */
+.navegacao {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+   width: 70px;
+    height: 17px; 
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bar:hover {
+    background-color: #fff;
+}
+
+input {
+    display: none;
+}
