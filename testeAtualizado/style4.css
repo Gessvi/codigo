@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #E3E3E3;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+
+/*== Estilo do Header ==*/
+
+header{
+    width: 100%;
+    padding: 30px 0;
+    position: fixed;
+    background-color: #9f4c096d; 
+    top: 0;
+    left: 0;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 21%;
+}
+
+header .logo #icon{
+    max-width: 80px;
+}
+
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+   
+}
+
+.menu-desktop nav a:hover{
+    transform: scale(1.13);
+}
+
+header .menu-desktop nav ul li a{
+    color: #cfcaca;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 800em;
+}
+
+/*== ESTILO DO MENU LATERAL ==*/
+.btn-abrir-menu i {
+    color: #fff;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 1px 3px;
+    box-shadow: 4px 4px 15px #232323b8;
+    border: 1px solid #ffffff43;
+    border-radius: 5px;
+}
+
+.menu-lateral {
+    width: 0%;
+    height: 100%;
+    background-color: #202020;
+    padding: 10px 0;
+    box-shadow: 3px 0 0 cadetblue;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .4s;
+    z-index: 999;
+}
+
+.menu-lateral.abrir-menu {
+    width: 20%;
+}
+
+.menu-lateral .btn-fechar {
+    color: #ccc;
+    font-size: 50px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.menu-lateral nav ul {
+    text-align: left;
+    list-style-type: none;
+}
+
+.menu-lateral nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 300;
+    padding:12% 4%;
+}
+
+.menu-lateral nav ul li a i{
+    padding: 0 30px;
+    font-size: 35px;
+}
+
+.menu-lateral nav ul li a:hover {
+    background-color: #ff6f016d; 
+    transition: 0.3s;
+}
+
+ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+    margin: 5px;
+}
+
+.categoria {
+    position: relative;
+    display: inline-block;
+}
+
+.categoria .lista-tipos {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 25px;
+    margin-top: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.177);
+}
+
+.categoria .lista-tipos ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.categoria .lista-tipos ul li{
+    display: flex;
+    font-size: 17px;
+    font-weight: 500;
+    gap: 60px;
+}
+
+.categoria:hover .lista-tipos {
+    display: block;
+    cursor: pointer;
+}
+
+.categoria .lista-tipos ul li:hover {
+    background-color: #5e5e5e61;
+    padding: 20px;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+/* == Estilo do Slide ==*/
+
+.nav-manual {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-manual label {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-manual label:hover {
+    background-color: #ff6f016d;
+}
+
+.img-desktop{
+    width: 100%;
+}
+
+.slider-content input:checked + .slide-box {
+    display: block;
+}
+
+.slider-content .slide-box {
+    display: none;
+}
+
+.slider {
+    position: relative; 
+    z-index: -9999;
+}
+
+/* == Estilo da Propaganda ==*/
+
+section.livro{
+    height: 600px;
+
+    background-image: url(img/livraria.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.livro > .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000b2;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.livro > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.livro h3{
+    font-size: 3em;
+    line-height: 50px;
+    font-weight: 200;
+}
+
+.livro h3 span{
+    display: block;
+    font-weight: 600;
+}
+
+.livro p{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.livro button{
+    width: 220px;
+    height: 60px;
+}
+
+/* == Estilo do Conteudo do Site*/
+
+.info{
+    width: 100%;
+    padding: 100px 6px; 
+    background-color: #ffc99f;
+}
+.info img{
+    height: auto;
+    width: 430px;
+}
+.info-texto{
+    width: 550px;
+}
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-texto h2{
+    color: #202020;
+    font-size: 75px;
+    text-transform:  capitalize;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.info-texto h5{
+    color: #202020;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.info-texto span{
+    color: rgb(85, 163, 166);
+}
+.info-texto p{
+    color: rgb(14, 116, 53);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.infoDois{
+    width: 100%;
+    padding: 100px 6px; 
+    background-color: white;
+}
+.infoDois img{
+    height: auto;
+    width: 430px;
+}
+.info-textoDois{
+    width: 550px;
+}
+
+.mainDois{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-textoDois h2{
+    color: #202020;
+    font-size: 75px;
+    text-transform:  capitalize;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.info-textoDois h5{
+    color: #202020;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.info-textoDois span{
+    color: rgb(85, 163, 166);
+}
+.info-textoDois p{
+    color: rgb(14, 116, 53);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button{
+    background-color: yellowgreen;
+    color: #202020;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 18px 32px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover{
+    background-color: transparent;
+    border: 2px solid yellowgreen;
+    cursor: pointer;
+}
+
+.vantagem{
+    background-color: rgb(211, 209, 209);
+    width: 100%;
+    padding: 100px 0px;
+}
+.conteudo h2{
+    color: #202020;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.card{
+    height: 450px;
+    width: 335px;
+    padding: 20px 35px;
+    background-color: #e6c793a9;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: rgb(13, 84, 87);
+}
+
+h5{
+    color: rgba(10, 95, 54, 0.864);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.pra p{
+    color: #202020;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.card .button{
+    background-color: yellowgreen;
+    color: #202020;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.card button:hover{
+    background-color: transparent;
+    border: 2px solid yellowgreen;
+    cursor: pointer;
+}
+
+/* == Footer == */
+
+footer{
+    background-color:rgba(98, 77, 52, 0.919);
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 36px 18px 18px;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #332719;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: white;
+}
+.desing{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
