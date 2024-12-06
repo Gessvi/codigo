@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
-body {
-    background-color: #E3E3E3;
+body{
+    background-color: #ffffffac;
     height: 100vh;
-    padding-top: 100px;
 }
 
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
 
 /*== Estilo do Header ==*/
 
 header{
     width: 100%;
-    padding: 30px 0;
+    padding: 40px 0;
     position: fixed;
-    background-color: #dfa87a6d; 
     top: 0;
     left: 0;
 }
@@ -52,12 +55,44 @@ header .menu-desktop nav ul li{
 }
 
 header .menu-desktop nav ul li a{
-    color: #582e05;
+    color: #fff;
     text-decoration: none;
     display: inline-block;
     transition: 0.3s;
     font-size: 20px;
-    font-weight: 800em;
+}
+
+header .btn-login button, .hero-site button, .livro button{
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+header .btn-login button:hover, .hero-site button:hover, .livro button:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.categoria {
+    position: relative;
+    display: inline-block;
+}
+
+.categoria .lista-tipos {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 25px;
+    margin-top: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.177);
 }
 
 /*== ESTILO DO MENU LATERAL ==*/
@@ -136,22 +171,6 @@ ul li.item-menu a {
     margin: 5px;
 }
 
-.categoria {
-    position: relative;
-    display: inline-block;
-}
-
-.categoria .lista-tipos {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    z-index: 1;
-    padding: 25px;
-    margin-top: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.177);
-}
 
 .categoria .lista-tipos ul {
     list-style-type: none; 
@@ -178,54 +197,197 @@ ul li.item-menu a {
     transition: .2s;
 }
 
-/* == Estilo do Slide ==*/
+/*== Estilo do hero ==*/
 
-.nav-manual {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+section.hero-site{
+    height: 100vh;
+    background-image: url(img/livraria4.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
 }
 
-.nav-manual label {
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.hero-site .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.hero-site .txt-hero h1{
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 200;
 }
 
-.nav-manual label:hover {
-    background-color: #ff6f016d;
-}
-
-.img-desktop{
-    width: 100%;
-}
-
-.slider-content input:checked + .slide-box {
+.hero-site .txt-hero h1 span{
     display: block;
+    margin: 7px 0;
+    font-weight: 800;
 }
 
-.slider-content .slide-box {
-    display: none;
+.hero-site .txt-hero p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 7px 0;
 }
 
-.slider {
-    position: relative; 
-    z-index: -9999;
+.hero-site button{
+   width: 220px; 
+   height: 60px;
+   font-size: 20px;
+   margin: 10px 0;
 }
 
+/*== Estilo das Vantagens ==*/
+section.vantagens{
+    padding: 110px 0;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
 
-/* == Estilo da Propaganda ==*/
+.vantagens .itens-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 60px;
+}
 
+.vantagens .itens-container .img-itens img{
+    max-width: 480px;
+    margin-left: 20%;
+}
+
+.vantagens .itens-container .img-itens .local{
+    width: 1000px;
+    height: 300px;
+}
+
+.vantagens .itens-container .img-itens .site{
+    width: 1000px;
+    height: 310px;
+}
+
+.vantagens .itens-container .txt-itens h3{
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.itens-container .txt-itens h3 span{
+    font-weight: 300;
+}
+
+.itens-container .txt-itens p{
+    font-size: 30px;
+}
+/*part 02*/
+
+.vantagens .itens-container2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 60px;
+    padding-top: 8%;
+}
+
+.vantagens .itens-container2 img{
+    max-width: 480px;
+    margin-right: 100px;
+}
+
+.vantagens .itens-container2 .img-itens .local{
+    width: 1000px;
+    height: 300px;
+}
+
+.vantagens .itens-container2 .img-itens .site{
+    width: 1000px;
+    height: 310px;
+}
+
+.vantagens .itens-container2 .txt-itens2 h3{
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.itens-container2 .txt-itens2 h3 span{
+    font-weight: 300;
+}
+
+.itens-container2 .txt-itens2 p{
+    font-size: 30px;
+}
+
+/* Estilo dos botões do contato*/
+section.contato{
+    background-color: #ffffff7f;
+    box-shadow: 0 0 10px rgba(144, 144, 144, 0.453);
+    padding: 80px 0;
+}
+
+.txt-contato, .icons-contato{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3{
+    font-size: 2.5em;
+    margin: 40px;
+    line-height: 50px;
+    font-weight: 300;
+}
+
+.contato .txt-contato p{
+   margin: 40px;
+}
+
+.contato .txt-contato h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.contato .icons-contato a{
+    text-decoration: none;
+}
+
+.contato .icons-contato button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+
+    width: 60%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+
+    background-color: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.contato .icons-contato button i{
+    font-size: 20px;
+}
+
+.contato .icons-contato button:hover{
+    background-color: #000;
+}
+
+.contato .icons-contato button:hover i, .contato .icons-contato button:hover p{
+    color: #fff;
+}
+
+/*== Estilo da Propaganda de livro ==*/
 section.livro{
     height: 600px;
 
-    background-image: url(img/livraria.webp);
+    background-image: url(img/estante.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -278,103 +440,102 @@ section.livro{
     height: 60px;
 }
 
-/* == Estilo do Conteudo do Site*/
+/*== Estilo Final ==*/
 
-.info{
-    width: 100%;
-    padding: 100px 6px; 
-    background-color: #ffe0c8;
+section.como-funciona {
+    display: flex; 
+    padding: 80px 0;
 }
-.info img{
+
+.como-funciona .interface {
+    display: flex; 
+    width: 100%; 
+}
+
+.como-funciona .txt-funciona{
+    position: sticky;
+    top: 50%;
+    padding-bottom: 35px;
+}
+
+.txt-funciona {
+    width: 50%; 
+    padding-right: 30%;
+    padding-top: 17%;
+    text-align: center;
+}
+
+.instrucoes {
+    width: 50%;
+    flex-direction: column;
+}
+
+.como-funciona .txt-funciona h3 {
+    font-size: 4em;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span {
+    display: block;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.instrucoes .instru-box {
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+    border: 5px solid black; 
+    padding: 20px;
+}
+
+.instrucoes .instru-box img {
+    max-width: 100px; 
     height: auto;
-    width: 430px;
-}
-.info-texto{
-    width: 550px;
 }
 
-.main{
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
+.como-funciona .txt-funciona h3{
+    font-size: 4em;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span{
+    display: block;
+    font-weight: 600;
+}
+
+.instrucoes .instru-box{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 20px;
+
+    margin-bottom: 40px;
+    border: 2px solid black;
+    padding: 20px;
 }
 
-.info-texto h2{
-    color: #202020;
-    font-size: 75px;
-    text-transform:  capitalize;
-    margin-bottom: 20px;
-    margin-left: 25px;
+.instrucoes .instru-box img{
+    max-width: 100px;
 }
 
-.info-texto h5{
-    color: #202020;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.info-texto span{
-    color: rgb(85, 163, 166);
-}
-.info-texto p{
-    color: rgb(14, 116, 53);
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
+.instrucoes .instru-box h4{
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
-.infoDois{
-    width: 100%;
-    padding: 100px 6px; 
-    background-color: white;
-}
-.infoDois img{
-    height: auto;
-    width: 430px;
-}
-.info-textoDois{
-    width: 550px;
+.instrucoes .instru-box h4 span{
+    font-weight: 300;
 }
 
-.mainDois{
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.instrucoes .instru-box p{
+    line-height: 20px;
 }
 
-.info-textoDois h2{
-    color: #202020;
-    font-size: 75px;
-    text-transform:  capitalize;
-    margin-bottom: 20px;
-    margin-left: 25px;
-}
+/*Vantagens*/
 
-.info-textoDois h5{
-    color: #202020;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.info-textoDois span{
-    color: rgb(85, 163, 166);
-}
-.info-textoDois p{
-    color: rgb(14, 116, 53);
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
-}
 
 button{
     background-color: yellowgreen;
@@ -385,6 +546,7 @@ button{
     padding: 18px 32px;
     border-radius: 30px;
     transition: .4s;
+    margin-left: 25%;
 }
 
 button:hover{
@@ -393,8 +555,26 @@ button:hover{
     cursor: pointer;
 }
 
+
+.vant{
+    background-color: yellowgreen;
+    color: #202020;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 15px 28px;
+    border-radius: 30px;
+    transition: .4s;
+    margin-right: 60px;
+}
+
+.vant:hover{
+    background-color: transparent;
+    border: 2px solid yellowgreen;
+    cursor: pointer;
+}
 .vantagem{
-    background-color: rgb(246, 243, 243);
+    background-color: rgb(228, 234, 204);
     width: 100%;
     padding: 100px 0px;
 }
@@ -417,7 +597,7 @@ button:hover{
     height: 450px;
     width: 335px;
     padding: 20px 35px;
-    background-color:#f9d8b2;
+    background-color: #e6c793a9;
     border-radius: 20px;
     margin: 15px;
     position: relative;
@@ -462,84 +642,4 @@ h5{
     background-color: transparent;
     border: 2px solid yellowgreen;
     cursor: pointer;
-}
-
-/* == Footer == */
-
-footer{
-    background-color:#dfad7e;
-}
-
-.footerContainer{
-    width: 100%;
-    padding: 36px 18px 18px;
-}
-
-.socialIcons{
-    display: flex;
-    justify-content: center;
-}
-
-.socialIcons a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-
-.socialIcons a i{
-    font-size: 2em;
-    color: black;
-    opacity: 0.9;
-}
-
-.socialIcons a:hover{
-    background-color: #111;
-    transition: 0.5s;
-}
-
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
-}
-
-.footerNav{
-    margin: 30px 0;
-}
-
-.footerNav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-
-.footerNav ul li a{
-    color: white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-
-.footerNav ul li a:hover{
-    opacity: 1;
-}
-
-.footerBottom{
-    background-color:#85450ac9;
-    padding: 20px;
-    text-align: center;
-}
-
-.footerBottom p{
-    color: white;
-}
-.desing{
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
 }
