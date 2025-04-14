@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Funcionario</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="icon-container">
+        <a href="login.html" class="icon-funcionario">
+        <i class="fi fi-rs-circle-user"></i>
+    </a>
+    </div>
+
+        <div class="conteiner">  
+            <form action="login.html" method="post" class="formulario">
+                <h1>Funcionario</h1>
+
+                <div class="input-box-email">
+                    <input type="text" name="codigo" placeholder="Codigo" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="senha">
+                    <div class="input-box-senha">
+                        <input type="Password" name="senha" id="senha" placeholder="Senha" class="inputUser" required>
+                        <i class='bx bxs-lock-alt' id="btn-senha" onclick="mostrarSenha()"></i>
+                    </div>
+
+                    <script src="main.js"></script>
+                    
+                    <div class="lembrar">
+                        <label><input type="checkbox"> Lembre-me</label>
+                        <a href="recuperar.html" class="click">Esqueceu senha?</a>
+                    </div>
+                </div>
+                
+
+               
+                <a href="doSite.html" class="btn">Login</a>
+              
+                    <p class="login-formulario">Não Tenho uma Conta <a href="cadastroFuncionario.html" class="click">  Cadastrar</a></p>
+                </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+</html>

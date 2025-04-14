@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="conteiner-formulario">
+        <form action="formulario.html" method="post" class="formulario">
+                <legend><b>Formulario do Funcionario</b></legend>
+
+                <div class="input-box-cadastro">
+                    <input type="text" name="nome" id="Nome" class="inputUser" placeholder="Nome Completo" required>
+                </div>
+
+                <div class="input-box-cadastro">
+                    <input type="tel" name="CPF" id="CPF" class="inputUser" placeholder="CPF" required>
+                </div>
+
+                <div class="input-box-cadastro">
+                    <input type="text" name="codigo" id="codigo" class="inputUser" placeholder="Codigo" required>
+                </div>
+
+                <div class="input-box-cadastro">
+                    <input type="password" name="senha" id="senha" class="inputUser" placeholder="Senha" required>
+                </div>
+
+                <button type="submit" class="btn">Cadastrar</button>
+
+                <div class="login">
+                    <label>Já tem conta?</label>
+                    <a href="loginFuncionario.html" class="click">Faça login</a>
+                </div>
+        </form>
+    </div>
+</body>
+
+</html>
