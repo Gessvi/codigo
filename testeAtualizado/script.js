@@ -6,12 +6,10 @@ let selectedGenre = null;
 
 // --- General ---
 document.addEventListener("DOMContentLoaded", () => {
-  // Verifica se estamos na página de cadastro2 (gêneros)
   if (document.getElementById("genres-dynamic-container")) {
     setupGenres("genres-dynamic-container");
   }
 
-  // Verifica se estamos na página cadastro1
   if (document.getElementById("nome") && document.getElementById("username")) {
     const userData = JSON.parse(localStorage.getItem("userData"));
     if (userData) {
@@ -22,24 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
-  // Adiciona evento de submit para o formulário de login
-  const loginForm = document.querySelector(".formulario");
-  if (loginForm && window.location.pathname.includes("login.html")) {
-    loginForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-      login();
-    });
-  }
-
-  // Adiciona evento de submit para o formulário de cadastro1
-  const cadastroForm = document.querySelector(".formulario");
-  if (cadastroForm && window.location.pathname.includes("cadastro1.html")) {
-    cadastroForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-      continuarCadastro();
-    });
-  }
 });
 
 // --- Login Page ---
@@ -48,25 +28,29 @@ function login() {
   const password = document.getElementById("password").value.trim();
   const errorMessage = document.getElementById("error-message");
 
-  if (!errorMessage) return; // Se não tiver elemento de erro, sai da função
-
   errorMessage.textContent = "";
+  errorMessage.style.visibility = "hidden";
 
   if (!email || !password) {
     errorMessage.textContent = "Por favor, insira email e senha.";
+    errorMessage.style.visibility = "visible";
     return;
   }
 
   const userData = JSON.parse(localStorage.getItem("userData"));
   if (!userData || userData.email !== email || userData.senha !== password) {
     errorMessage.textContent = "Email ou senha incorretos.";
+    errorMessage.style.visibility = "visible";
     return;
   }
 
+  // --- NEW BEHAVIOR ---
   if (!userData.generoFavorito) {
+    // User didn't complete cadastro2 (gênero favorito not filled)
     alert("Por favor, complete seu cadastro!");
     window.location.href = "cadastro2.html";
   } else {
+    // Normal login
     alert("Login efetuado com sucesso!");
     window.location.href = "main.html";
   }
@@ -76,38 +60,10 @@ function goToCadastro() {
   window.location.href = "cadastro1.html";
 }
 
-function togglePasswordVisibility(inputId, iconId) {
-  const input = document.getElementById(inputId);
-  const icon = document.getElementById(iconId);
-  
-  if (input && icon) {
-    if (input.type === "password") {
-      input.type = "text";
-      icon.textContent = "🙈";
-    } else {
-      input.type = "password";
-      icon.textContent = "👁️";
-    }
-  }
-}
-
-function mostrarSenha() {
-  const senhaInput = document.getElementById("senha");
-  if (senhaInput) {
-    if (senhaInput.type === "password") {
-      senhaInput.type = "text";
-    } else {
-      senhaInput.type = "password";
-    }
-  }
-}
-
 // --- Cadastro1 Page ---
 function validateUsername() {
   const username = document.getElementById("username").value.trim();
   const usernameError = document.getElementById("username-error");
-
-  if (!usernameError) return;
 
   if (username.length > 50) {
     usernameError.textContent = "Username deve ter no máximo 50 caracteres.";
@@ -121,8 +77,6 @@ function validateUsername() {
 function validatePassword() {
   const senha = document.getElementById("senha").value.trim();
   const senhaError = document.getElementById("senha-error");
-
-  if (!senhaError) return;
 
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{1,50}$/;
   if (!passwordRegex.test(senha)) {
@@ -146,16 +100,15 @@ function continuarCadastro() {
   validateUsername();
   validatePassword();
 
-  if (errorMessage) errorMessage.textContent = "";
+  errorMessage.textContent = "";
 
   if (!nome || !username || !email || !senha) {
-    if (errorMessage) errorMessage.textContent = "Preencha todos os campos.";
+    errorMessage.textContent = "Preencha todos os campos.";
     return;
   }
 
-  if ((usernameError && usernameError.className === "input-error") || 
-      (senhaError && senhaError.className === "input-error")) {
-    if (errorMessage) errorMessage.textContent = "Corrija os erros antes de continuar.";
+  if (usernameError.className === "input-error" || senhaError.className === "input-error") {
+    errorMessage.textContent = "Corrija os erros antes de continuar.";
     return;
   }
 
@@ -167,8 +120,6 @@ function continuarCadastro() {
 // --- Cadastro2 Page ---
 function setupGenres(containerId) {
   const container = document.getElementById(containerId);
-  if (!container) return;
-
   container.innerHTML = "";
 
   let index = 0;
@@ -202,19 +153,16 @@ function selectGenre(button) {
 
 function finalizarCadastro() {
   if (!selectedGenre) {
-    const genreError = document.getElementById("genre-error");
-    if (genreError) genreError.textContent = "Escolha seu gênero favorito.";
+    document.getElementById("genre-error").textContent = "Escolha seu gênero favorito.";
     return;
   }
 
   const userData = JSON.parse(localStorage.getItem("userData"));
-  if (userData) {
-    userData.generoFavorito = selectedGenre;
-    localStorage.setItem("userData", JSON.stringify(userData));
+  userData.generoFavorito = selectedGenre;
+  localStorage.setItem("userData", JSON.stringify(userData));
 
-    alert("Cadastro finalizado com sucesso!");
-    window.location.href = "main.html";
-  }
+  alert("Cadastro finalizado com sucesso!");
+  window.location.href = "main.html";
 }
 
 function triggerImageUpload() {
@@ -225,11 +173,8 @@ function handleImageUpload(event) {
   const file = event.target.files[0];
   if (file && file.type.startsWith("image/")) {
     const reader = new FileReader();
-    reader.onload = function(e) {
-      const profilePic = document.getElementById("profile-pic");
-      if (profilePic) {
-        profilePic.src = e.target.result;
-      }
+    reader.onload = function (e) {
+      document.getElementById("profile-pic").src = e.target.result;
     };
     reader.readAsDataURL(file);
   }
