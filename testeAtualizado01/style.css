@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(img/capa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*LOGIN*/
+.conteiner {
+    backdrop-filter: blur(20px);
+    padding: 50px 70px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #000;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-color: #b0885542;
+}
+
+.icon-funcionario{
+    color: white;
+    font-size: 42px;
+    text-decoration: none;
+}
+
+.conteiner-formulario{
+    backdrop-filter: blur(20px);
+    padding: 50px 45px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #000;
+    color: #fff;
+    text-align: center;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+input {
+    background-color: transparent;
+    border: none;
+}
+input::placeholder {
+    color: #ffffffce;
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+}
+.input-box {
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.input-box-email{
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.input-box-senha{
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    display: inline-block; 
+    padding: 18px 30px;
+    background-color: #fde5cf;
+    color: black; 
+    text-decoration: none; 
+    border-radius: 10px;
+    font-weight: 600;
+    border: none; 
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    margin-top: 23px;
+    font-size: 15px;
+} 
+.btn:hover {
+    background-color: #ffffffab; 
+}
+
+.lembrar {
+    display: flex;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 18px;
+    gap: 8px;
+}
+
+.click {
+    text-decoration: none;
+    color: #00af58;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.click:hover {
+    color: #ffffffb9;
+}
+fieldset {
+    outline: none;
+    border: none;
+}
+label {
+    text-align: left;
+}
+.inputUser:focus~.labelInput,
+.inputUser:valid~.labelInput {
+    top: -20%;
+    font-size: 12px;
+    color: #DE9151;
+}
+/*CADASTRO 02*/
+
+/* BOX DE SELEÇÃO DE GÊNEROS */
+.genre-container {
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #000;
+    color: #fff;
+    text-align: center;
+    background-color: #b0885542;
+    margin: 30px 0;
+    max-width: 600px;
+    width: 100%;
+}
+
+.genre-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #fde5cf;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.genre-button {
+    padding: 18px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.genre-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.genre-button.selected {
+    background-color: #fde5cf;
+    color: #000;
+    font-weight: 600;
+    border-color: #fde5cf;
+    box-shadow: 0 0 10px rgba(253, 229, 207, 0.5);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .genre-container {
+        padding: 30px;
+    }
+    
+    .genre-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .genre-container {
+        padding: 25px 20px;
+    }
+    
+    .genre-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ADICIONE ISSO AO SEU CSS */
+
+/* Cores temáticas para cada gênero */
+.btn-ficcao {
+    background-color: #4fc3f7 !important;
+    color: #000 !important;
+    border: 1px solid #4fc3f7 !important;
+}
+.btn-comedia {
+    background-color: #ffeb3b !important;
+    color: #000 !important;
+    border: 1px solid #ffeb3b !important;
+}
+.btn-romance {
+    background-color: #f06292 !important;
+    color: #fff !important;
+    border: 1px solid #f06292 !important;
+}
+.btn-terror {
+    background-color: #ba68c8 !important;
+    color: #fff !important;
+    border: 1px solid #ba68c8 !important;
+}
+.btn-darkromance {
+    background-color: #d32f2f !important;
+    color: #fff !important;
+    border: 1px solid #d32f2f !important;
+}
+.btn-misterio {
+    background-color: #26a69a !important;
+    color: #fff !important;
+    border: 1px solid #26a69a !important;
+}
+.btn-autoajuda {
+    background-color: #66bb6a !important;
+    color: #000 !important;
+    border: 1px solid #66bb6a !important;
+}
+
+/* Efeitos para o botão principal */
+.btn {
+    transition: all 0.4s ease, transform 0.2s ease;
+    margin-top: 25px;
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Melhoria na seleção */
+.genre-button.selected {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(253, 229, 207, 0.6);
+}
+
+/* Efeito de pulso quando selecionado */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.genre-button.selected {
+    animation: pulse 0.5s ease;
+}
+
+/* EFEITOS ESPCIAIS */
+
+  /* SEU CSS ATUALIZADO COM MÁGICA */
+  .conteiner {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fairy-dust {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100;
+    animation: fairyTrail 2s linear forwards;
+  }
+  
+  @keyframes fairyTrail {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--tx, 100px), var(--ty, -150px));
+      opacity: 0;
+    }
+  }
+  
+  .genre-button.selected {
+    position: relative;
+  }
+  
+  .genre-button.selected::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fde5cf"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>') no-repeat;
+    animation: starGlow 1.5s infinite alternate;
+  }
+  
+  @keyframes starGlow {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.3); opacity: 1; }
+  }
+  
+  /* NOVOS ESTILOS PARA RECOMENDAÇÕES */
+  .recommendations {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease, opacity 0.5s ease;
+    opacity: 0;
+    background: rgba(176, 136, 85, 0.3);
+    border-radius: 12px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .recommendations.show {
+    max-height: 500px;
+    opacity: 1;
+    padding: 20px;
+  }
+  
+  .book-card {
+    background: rgba(253, 229, 207, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid #fde5cf;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-card:hover {
+    transform: translateX(10px);
+    background: rgba(253, 229, 207, 0.25);
+  }
+  
+  .book-title {
+    font-weight: 600;
+    color: #fde5cf;
+    margin-bottom: 5px;
+  }
+  
+  .book-author {
+    font-size: 0.9em;
+    opacity: 0.8;
+  }
+  
+  .magic-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .magic-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.7s, opacity 1s;
+  }
+  
+  .magic-btn.animate::after {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  :root {
+    --bg-color: #b0885542;
+    --text-color: #fff;
+    --accent-color: #fde5cf;
+    --border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* MODO TERROR */
+  .terror-mode {
+    --bg-color: #0a0408;
+    --text-color: #e0d3d9;
+    --accent-color: #c9a66b;
+    --border-color: rgba(120, 45, 70, 0.5);
+    background-image: radial-gradient(circle at 20% 30%, #1a0a12 0%, #000 70%);
+  }
+  
+  .terror-mode .genre-title {
+    text-shadow: 0 0 10px #8a2a52;
+  }
+  
+  .terror-mode .genre-button {
+    background-color: rgba(40, 10, 25, 0.6);
+    border-color: #4a182a;
+  }
+  
+  .terror-mode .genre-button:hover {
+    background-color: rgba(80, 20, 45, 0.6);
+  }
+  
+  .terror-mode .genre-button.selected {
+    background-color: #8a2a52;
+    color: #f0e0e0;
+    box-shadow: 0 0 15px #8a2a52;
+  }
+  
+  /* EFEITO DE VELA */
+  .candle-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgba(138, 42, 82, 0.3) 0%, 
+                rgba(10, 4, 8, 0.95) 70%);
+  }
+  
+  .terror-mode .candle-light {
+    opacity: 1;
+  }
+  
+  .candle-flame {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background: radial-gradient(circle, 
+              rgba(255, 160, 60, 0.8) 0%, 
+              rgba(255, 80, 0, 0.5) 30%, 
+              transparent 70%);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: flicker 3s infinite alternate;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes flicker {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    25% { transform: translate(-50%, -50%) scale(1.1, 0.9); }
+    50% { transform: translate(-50%, -50%) scale(0.9, 1.1); }
+    75% { transform: translate(-50%, -50%) scale(1.05); }
+  }
+  
+  /* RESTANTE DO SEU CSS ANTERIOR (MANTIDO INTEGRO) */
+  .conteiner {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .genre-button {
+    border-color: var(--border-color);
+    color: var(--text-color);
+  }
+  
+  .genre-title {
+    color: var(--accent-color);
+  }
+  
+
+/* CADASTRO 01*/
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    width: 90%;
+    max-width: 400px;
+}
+
+textarea#bioText {
+    height: 150px; /* Larger area */
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Extra responsive */
+@media (max-width: 480px) {
+    .cadastro-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
+
+/* Profile Picture */
+.profile-pic-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px; /* Same as input field spacing */
+}
+
+#profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+#profile-pic:hover {
+    border-color: #007bff;
+}
+/* Non-bold h2 */
+.heading-regular {
+    font-size: 24px;        /* keeps the size */
+    font-weight: 300;       /* normal weight; thinner than bold (which is 700) */
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.input-box-cadastro {
+    border: 1px solid #fff;
+    padding: 8px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+}
+.data {
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #fff;
+    padding: 4px;
+    border-radius: 5px;
+}
+.nome-data {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.btn-recuperar{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+}
+.btn-recuperar:hover {
+    background-color: #d8c9b7ab;
+}
+.login{
+    padding: 12px;
+}
+.login > p{
+    margin: 30px;
+}
+login.html:target ~ .content #cadastro,
+formulario.html:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+ 
+formulario.html:target ~ .content #login,
+login.html:target ~ .content #cadastro{
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 97px;
+    border: 2px solid #fff;
+    border-radius: 50%;  /* Alterado de 60% para 50% para círculo perfeito */
+    background-color: #fff;
+    margin-bottom: 25px;
+    width: 100px;        /* Tamanho fixo para garantir o círculo perfeito */
+    height: 100px;       /* Mesmo valor da width para formar um círculo */
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-container {
+    position: fixed; 
+    top: 20px;
+    left: 20px; 
+    font-size: 36px; 
+    color: #fff; 
+}
