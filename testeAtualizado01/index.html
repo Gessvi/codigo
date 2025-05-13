@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Home</title>
+</head>
+<body>
+
+    <div class="overlay" id="overlay-topo"></div>
+    
+    <header>
+        <div class="btn-abrir-menu" id="btn-menu">
+            <i class="bi bi-person-circle"><p class="menu">MENU</p></i>
+        </div>
+    
+        <!-- Menu Lateral -->
+        <div class="menu-lateral" id="menu-lateral">
+            <div class="btn-fechar">
+                <i class="bi bi-x"></i>
+            </div>
+            
+            <!-- Cabeçalho fixo do menu -->
+            <div class="menu-header">
+                <img src="img/logo2.png" alt="Logo" class="logo">
+                <div class="profile-info">
+                    <h2>Jhope</h2>
+                    <div class="profile-stats">
+                        <span>4 livros salvos</span>
+                        <span>5 livrarias salvas</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Conteúdo rolável do menu -->
+            <div class="menu-scrollable">
+                <nav class="nav">
+                    <ul>
+                        <li class="divisor-menu"></li>
+                        <li class="item-menu"><a href="Perfil.html"><i class="bi bi-person-fill"></i>Perfil</a></li>       
+                        <li class="item-menu">
+                            <a href="#" id="livros-salvos"><i class="bi bi-bookmark-heart-fill"></i>Livros Salvos</a>
+                        </li>
+                        <li class="item-menu">
+                            <a href="#" id="livrarias-menu"><i class="bi bi-bookmarks-fill"></i>Livrarias</a>
+                        </li>
+
+                        <li class="item-menu"><a href="configuracao.html"><i class="bi bi-gear-fill"></i>Configuração</a></li>
+                        <li class="divisor-menu"></li>
+                        <li class="item-menu">
+                            <a href="#"><i class="bi bi-moon-fill"></i>Tema<i class="bi bi-box-arrow-right icone-saida"></i></a>
+                            <a href="login.html"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Submenu Livros Salvos -->
+        <div class="submenu-lateral" id="submenu-livros">
+            <div class="submenu-header">
+                <i class="bi bi-chevron-left voltar-submenu"></i>
+                <h3>Estante de Livros</h3>
+            </div>
+            <div class="menu-scrollable">
+                <ul class="submenu-items">
+                    <!-- Livro 1 -->
+                    <li class="livro-item">
+                        <div class="livro-container">
+                            <img src="img/capaOpequenoprincipe.png" alt="O Pequeno Príncipe" class="livro-imagem">
+                            <div class="livro-info">
+                                <span class="livro-titulo-salvo">O Pequeno Príncipe</span>
+                                <span class="livro-autor-salvo">Antoine de Saint-Exupéry</span>
+                            </div>
+                            <div class="livro-actions">
+                                <i class="bi bi-trash lixeira"></i>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Livro 2 -->
+                    <li class="livro-item">
+                        <div class="livro-container">
+                            <img src="img/capaOextraordinario.png" alt="O Extraordinário" class="livro-imagem">
+                            <div class="livro-info">
+                                <span class="livro-titulo-salvo">O Extraordinário</span>
+                                <span class="livro-autor-salvo">R.J. Palacio</span>
+                            </div>
+                            <div class="livro-actions">
+                                <i class="bi bi-trash lixeira"></i>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Livro 3 -->
+                    <li class="livro-item">
+                        <div class="livro-container">
+                            <img src="img/capaAselecao.png" alt="A Seleção" class="livro-imagem">
+                            <div class="livro-info">
+                                <span class="livro-titulo-salvo">A Seleção</span>
+                                <span class="livro-autor-salvo">Kiera Cass</span>
+                            </div>
+                            <div class="livro-actions">
+                                <i class="bi bi-trash lixeira"></i>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Livro 4 -->
+                    <li class="livro-item">
+                        <div class="livro-container">
+                            <img src="img/Mrs. Dalloway.jpg" alt="Alice no País das Maravilhas" class="livro-imagem">
+                            <div class="livro-info">
+                                <span class="livro-titulo-salvo">Alice no País das Maravilhas</span>
+                                <span class="livro-autor-salvo">Lewis Carroll</span>
+                            </div>
+                            <div class="livro-actions">
+                                <i class="bi bi-trash lixeira"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Livro 5 -->
+                    <li class="livro-item">
+                        <div class="livro-container">
+                            <img src="img/Cinderella.jpg" alt="Alice no País das Maravilhas" class="livro-imagem">
+                            <div class="livro-info">
+                                <span class="livro-titulo-salvo">Mrs. Dalloway</span>
+                                <span class="livro-autor">Virginia Wolf</span>
+                            </div>
+                            <div class="livro-actions">
+                                <i class="bi bi-trash lixeira"></i>
+                            </div>
+                            <!-- Livro 6 -->
+                    <li class="livro-item">
+                        <div class="livro-container">
+                            <img src="img/aRevolucao.jpg" alt="Alice no País das Maravilhas" class="livro-imagem">
+                            <div class="livro-info">
+                                <span class="livro-titulo">A Revolução dos Bichos</span>
+                                <span class="livro-autor">George Orvell</span>
+                            </div>
+                            <div class="livro-actions">
+                                <i class="bi bi-trash lixeira"></i>
+                            </div>
+                            <!-- Livro 7 -->
+                    <li class="livro-item">
+                        <div class="livro-container">
+                            <img src="img/Penguim.jpg" class="livro-imagem">
+                            <div class="livro-info">
+                                <span class="livro-titulo">Penguim Companhia</span>
+                                <span class="livro-autor-salvo">Willian Shakespeare</span>
+                            </div>
+                            <div class="livro-actions">
+                                <i class="bi bi-trash lixeira"></i>
+                            </div>
+                        </ul>
+                     </div>
+                 </div>
+
+                <!-- Submenu Livrarias -->
+            <div class="submenu-lateral" id="submenu-livrarias">
+            <div class="submenu-header">
+                <i class="bi bi-chevron-left voltar-submenu" id="voltar-livrarias"></i>
+                <h3>Minhas Livrarias</h3>
+            </div>
+            
+            <div class="menu-scrollable">
+            <ul class="submenu-items" id="lista-livrarias">
+            
+            <!-- Livraria 1 - Exemplo com promoção -->
+            <li class="livraria-item" data-distancia="2.5">
+                <div class="livraria-container">
+                    <img src="img/leituraa.webp" alt="Livraria Leitura" class="livraria-imagem">
+                    <div class="livraria-info">
+
+                        <span class="livraria-nome">Livraria Leitura
+                            <span class="tag-promocao">PROMO</span>
+                        </span>
+                        <div class="livraria-metadata">
+                            <span class="livraria-status aberto" data-horario="09:00-18:00">Aberto</span>
+                            <span class="livraria-local">Av. Tancredo Neves, 3133 - 9.7km</span>
+                        </div>
+                        <div class="livraria-avaliacao">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="avaliacao-texto">4.5 (128)</span>
+                        </div>
+                    </div>
+                    <div class="livraria-actions">
+                        <i class="bi bi-trash lixeira"></i>
+                        <a href="https://www.google.com/search?q=livraria+salvador&sca_esv=27056c0349cec439&rlz=1C1GCEU_pt-ptBR1161BR1162&biw=1517&bih=674&tbm=lcl&ei=uIkiaLvjCsf85OUP_pjp0Q4&ved=0ahUKEwi7n7qPkJ-NAxVHPrkGHX5MOuoQ4dUDCAo&uact=5&oq=livraria+salvador&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIhFsaXZyYXJpYSBzYWx2YWRvcjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5IpTNQ0wtYwTJwAngAkAEDmAG7AaABuRuqAQQwLjI0uAEDyAEA-AEBmAIUoALQF6gCAMICBRAAGO8FwgIIEAAYgAQYogTCAgcQIRigARgKwgIKEAAYgAQYQxiKBcICCBAAGIAEGLEDwgILEAAYgAQYsQMYgwHCAgsQABiABBixAxiKBcICDRAAGIAEGLEDGEMYigXCAggQABiABBiSA8ICCxAAGIAEGJIDGIoFwgIQEAAYgAQYsQMYQxjJAxiKBcICCxAAGIAEGLEDGMkDwgIIEAAYFhgKGB6YAwPxBa56BVud7VJxiAYBkgcGMS4xOC4xoAezhgGyBwYwLjE4LjG4B8oX&sclient=gws-wiz-local#rlfi=hd:;si:8150340164801587501,l,ChFsaXZyYXJpYSBzYWx2YWRvckj8s9Ch07aAgAhaFxAAGAEiEWxpdnJhcmlhIHNhbHZhZG9ykgEKYm9va19zdG9yZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOdE0zRnBRMGRSRUFFqgFIEAEqDCIIbGl2cmFyaWEoDDIfEAEiG7cwT9ob0IVBc-qyc_JGvdResWicHmoMGLtmNzIVEAIiEWxpdnJhcmlhIHNhbHZhZG9y-gEECAAQPw,y,Xl4Q3IbxnTQ;mv:[[-12.9032143,-38.3408161],[-13.020290399999999,-38.5348901]]" class="btn-mapa" target="_blank">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Livraria 2 - Exemplo fechado -->
+            <li class="livraria-item" data-distancia="1.8">
+                <div class="livraria-container">
+                    <img src="img/escariz.webp" alt="Saraiva" class="livraria-imagem">
+                    <div class="livraria-info"> 
+                            <span class="livraria-status"></span>
+                        
+                        <span class="livraria-nome">Livraria Escariz</span>
+                        <div class="livraria-metadata">
+                            <span class="livraria-status fechado">Fechado</span>
+                            <span class="livraria-local">. Fernão de Magalhães, 2992 - 23km</span>
+                        </div>
+                        <div class="livraria-avaliacao">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="avaliacao-texto">4.0 (95)</span>
+                        </div>
+                    </div>
+                    <div class="livraria-actions">
+                        <i class="bi bi-trash lixeira"></i>
+                        <a href="https://www.google.com/search?q=livraria+salvador&sca_esv=27056c0349cec439&rlz=1C1GCEU_pt-ptBR1161BR1162&biw=1517&bih=674&tbm=lcl&ei=uIkiaLvjCsf85OUP_pjp0Q4&ved=0ahUKEwi7n7qPkJ-NAxVHPrkGHX5MOuoQ4dUDCAo&uact=5&oq=livraria+salvador&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIhFsaXZyYXJpYSBzYWx2YWRvcjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5IpTNQ0wtYwTJwAngAkAEDmAG7AaABuRuqAQQwLjI0uAEDyAEA-AEBmAIUoALQF6gCAMICBRAAGO8FwgIIEAAYgAQYogTCAgcQIRigARgKwgIKEAAYgAQYQxiKBcICCBAAGIAEGLEDwgILEAAYgAQYsQMYgwHCAgsQABiABBixAxiKBcICDRAAGIAEGLEDGEMYigXCAggQABiABBiSA8ICCxAAGIAEGJIDGIoFwgIQEAAYgAQYsQMYQxjJAxiKBcICCxAAGIAEGLEDGMkDwgIIEAAYFhgKGB6YAwPxBa56BVud7VJxiAYBkgcGMS4xOC4xoAezhgGyBwYwLjE4LjG4B8oX&sclient=gws-wiz-local#rlfi=hd:;si:12930917271560892379,l,ChFsaXZyYXJpYSBzYWx2YWRvckir-Pvp_7OAgAhaGRAAGAAYASIRbGl2cmFyaWEgc2FsdmFkb3KSAQpib29rX3N0b3JlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJ3TkdNeVRXUm5FQUWqAUgQASoMIghsaXZyYXJpYSgMMh8QASIbtzBP2hvQhUFz6rJz8ka91F6xaJweagwYu2Y3MhUQAiIRbGl2cmFyaWEgc2FsdmFkb3L6AQQIABBB,y,ZGC08ZEtx5k;mv:[[-12.9032143,-38.3408161],[-13.020290399999999,-38.5348901]]" class="btn-mapa" target="_blank">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                    <!-- Livraria 3 - Exemplo com promoção -->
+            <li class="livraria-item" data-distancia="2.5">
+                <div class="livraria-container">
+                    <img src="img/seboSaoJos.jpg" alt="Sebo São José" class="livraria-imagem">
+                    <div class="livraria-info">
+
+                        <span class="livraria-nome">Sebo São José
+                        </span>
+                        <div class="livraria-metadata">
+                            <span class="livraria-status fechado">Fechado</span>
+                            <span class="livraria-local">R. Chile,22 - 8.4km</span>
+                        </div>
+                        <div class="livraria-avaliacao">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="avaliacao-texto">3.5 (142)</span>
+                        </div>
+                    </div>
+                    <div class="livraria-actions">
+                        <i class="bi bi-trash lixeira"></i>
+                        <a href="https://www.google.com/search?q=sebo+s%C3%A3o+jos%C3%A9&sca_esv=27056c0349cec439&rlz=1C1GCEU_pt-ptBR1161BR1162&biw=1517&bih=674&tbm=lcl&ei=SYsiaLehNJKf5OUPzeu0oQs&oq=sebo+s&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIgZzZWJvIHMqAggBMgUQABiABDIIEAAYgAQYyQMyBRAAGIAEMgUQABiABDIFEAAYgAQyCxAAGIAEGJIDGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjbHlC5BVj8EXACeACQAQCYAZkBoAG4B6oBAzAuN7gBA8gBAPgBAZgCCKAClwioAgDCAgoQABiABBhDGIoFwgINEAAYgAQYsQMYQxiKBcICCBAAGIAEGLEDwgILEAAYgAQYsQMYgwHCAhAQABiABBixAxhDGIMBGIoFwgIIEAAYgAQYkgPCAg0QABiABBhDGMkDGIoFwgIQEAAYgAQYsQMYQxjJAxiKBZgDA_EFRR6jDl_RGRaSBwMxLjegB4AnsgcDMC43uAeOCA&sclient=gws-wiz-local" class="btn-mapa" target="_blank">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                        <!-- Livraria 4 -->
+            <li class="livraria-item" data-distancia="2.5">
+                <div class="livraria-container">
+                    <img src="img/cantinhDoSebo.jpg" alt="cantinho do sebo" class="livraria-imagem">
+                    <div class="livraria-info">
+
+                        <span class="livraria-nome">Cantinho do Sebo
+                        <span class="tag-promocao">PROMO</span>
+                        </span>
+                        <div class="livraria-metadata">
+                            <span class="livraria-status fechado">Fechado</span>
+                            <span class="livraria-local">Av. Sete de Setembro, 62  - 9.3km</span>
+                        </div>
+                        <div class="livraria-avaliacao">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="avaliacao-texto">4.4 (200)</span>
+                        </div>
+                    </div>
+                    <div class="livraria-actions">
+                        <i class="bi bi-trash lixeira"></i>
+                        <a href="https://www.google.com/search?q=cantinho+do+sebo&sca_esv=27056c0349cec439&rlz=1C1GCEU_pt-ptBR1161BR1162&biw=1517&bih=674&tbm=lcl&ei=dYoiaMvUOtWf5OUP2v_sgQ0&oq=cantinho+do+s&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIg1jYW50aW5obyBkbyBzKgIIADIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESM0WUABY_g5wAHgAkAEAmAGYAaABgA6qAQQwLjEzuAEDyAEA-AEBmAINoAKiD8ICCBAAGIAEGLEDwgILEAAYgAQYsQMYgwHCAg4QABiABBixAxiDARiKBcICERAAGIAEGLEDGIMBGMkDGIoFwgILEAAYgAQYkgMYigXCAg4QABiABBixAxiDARjJA5gDAJIHBDAuMTOgB_pKsgcEMC4xM7gHog8&sclient=gws-wiz-local#rlfi=hd:;si:10979384011689497040,l,ChBjYW50aW5obyBkbyBzZWJvSN6yxtjogICACFooEAAQARACGAAYARgCIhBjYW50aW5obyBkbyBzZWJvKggIAhAAEAEQApIBD3VzZWRfYm9va19zdG9yZaoBORABMh8QASIbgoFIlOHbkgpOo1D4hCj4Z_GF4YFoyISMN8EJMhQQAiIQY2FudGluaG8gZG8gc2Vibw,y,Ggq1ufJ_KOU;mv:[[-13.007139622680969,-38.46103258308869],[-13.007499577319027,-38.461402016911315]]" class="btn-mapa" target="_blank">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                  <!-- Livraria 5 - Exemplo fechado -->
+            <li class="livraria-item" data-distancia="1.8">
+                <div class="livraria-container">
+                    <img src="img/bibliotecaRibeira.jpeg" alt="Biblioteca Municipal Reitor E. S" class="livraria-imagem">
+                    <div class="livraria-info"> 
+                            <span class="livraria-status"></span>
+                        
+                        <span class="livraria-nome">Biblioteca Municipal Reitor Edgard Santos</span>
+                        <div class="livraria-metadata">
+                            <span class="livraria-status fechado">Fechado</span>
+                            <span class="livraria-local">Av. Pôrto dos Mastros - 1,3km</span>
+                        </div>
+                        <div class="livraria-avaliacao">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="avaliacao-texto">4.0 (95)</span>
+                        </div>
+                    </div>
+                    <div class="livraria-actions">
+                        <i class="bi bi-trash lixeira"></i>
+                        <a href="https://www.google.com/maps/place/Biblioteca+Municipal+Reitor+Edgard+Santos/@-12.9181285,-38.5021448,17z/data=!3m1!4b1!4m6!3m5!1s0x7160fee1ef629fb:0x42875b5ceaafb33d!8m2!3d-12.9181285!4d-38.4995645!16s%2Fg%2F1ts1sf6b?entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoASAFQAw%3D%3D" class="btn-mapa" target="_blank">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+        <!-- Barra de Pesquisa com Filtro -->
+        <div class="barra-pesquisa-container">
+            <input type="text" name="pesquisa" id="pesquisa" class="pesquisar" placeholder="Pesquisar livros..." required>
+            
+            <div class="filtro-categorias">
+                <button class="botao-filtro">
+                    Categorias <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="dropdown-categorias">
+                    <div class="categoria-item">Fantasia</div>
+                    <div class="categoria-item">Ficção Científica</div>
+                    <div class="categoria-item">Romance</div>
+                    <div class="categoria-item">Mistério</div>
+                    <div class="categoria-item">Biografia</div>
+                    <div class="categoria-item">História</div>
+                    <div class="categoria-item">Autoajuda</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteudo do Site -->
+    <section class="hero-site">
+        <div class="interface">
+            <div class="txt-hero">
+                <h1>Descubra um novo<span> Mundo Literario</span></h1>
+                <p>Encontre livros, compare preços</p>
+                <p><span> e localize livrarias de forma prática e econômica.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="secao-livros">
+            <h2 class="conteudo">Novidades</h2>
+            <div class="carrossel-container">
+                <button class="carrossel-btn prev-btn" aria-label="Anterior">&lt;</button>
+                <div class="carrossel">
+                    <div class="container-imagens">
+                        <img src="img/capaOcemiterio.jpg" alt="O Cemitério - Stephen King">
+                        <img src="img/capaAnne.jpg" alt="Anne de Green Gables">
+                        <img src="img/capaArainhaSol.jpg" alt="A Rainha do Sol">
+                        <img src="img/capaASOMBRA.jpg" alt="A Sombra">
+                        <img src="img/capaExorcista.webp" alt="O Exorcista">
+                        <img src="img/capaExpressoOriente.jpg" alt="O Expresso do Oriente">
+                        <img src="img/capaFrankenstein.jpg" alt="Frankenstein">
+                        <img src="img/capaIT.jpg" alt="It - A Coisa">
+                        <img src="img/capaMaldicaoCigano.jpg" alt="A Maldição Cigana">
+                        <img src="img/capaMarEsmeralda.jpg" alt="O Mar Esmeralda">
+                        <img src="img/capaMisery.jpg" alt="Misery">
+                        <img src="img/capaMonstors.jpg" alt="Monstros">
+                    </div>
+                </div>
+                <button class="carrossel-btn next-btn" aria-label="Próximo">&gt;</button>
+            </div>
+        </section>
+    
+        <section class="secao-livros">
+            <h2 class="conteudo">Recomendações</h2>
+            <div class="carrossel-container">
+                <button class="carrossel-btn prev-btn" aria-label="Anterior">&lt;</button>
+                <div class="carrossel">
+                    <div class="container-imagens">
+                        <img src="img/capaOiluminado.webp" alt="O Iluminado">
+                        <img src="img/capaAmigoImaginario.jpg" alt="O Amigo Imaginário">
+                        <img src="img/capaOpaciente.jpg" alt="O Paciente">
+                        <img src="img/capaOweKing.jpg" alt="Owe King">
+                        <img src="img/capaScarlets.jpg" alt="Scarlets">
+                        <img src="img/capaSOICHI.jpg" alt="Soichi">
+                        <img src="img/capaAescolha.png" alt="Scarlets">
+                        <img src="img/capaAlice.png" alt="Soichi">
+                        <img src="img/capaAmigoImaginario.jpg" alt="Scarlets">
+                        <img src="img/capaDetetive.png" alt="Soichi">
+                        <img src="img/capaOextraordinario.png" alt="Soichi">
+                        <img src="img/capaAselecao.png" alt="Soichi">
+                        <img src="img/capaOpequenoprincipe.png" alt="Soichi">
+                    </div>
+                </div>
+                <button class="carrossel-btn next-btn" aria-label="Próximo">&gt;</button>
+            </div>
+        </section>
+        
+  <!--EXIBIR LIVROS-->
+         <main>
+        <section class="secao-livros">
+            <h2 class="conteudo">Todos os Livros</h2>
+            <div class="livros-container" id="livros-container">
+                <!-- Livro 1 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaOpequenoprincipe.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Pequeno Príncipe</div>
+                        <div class="livro-autor">Antoine de Saint-Exupéry</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 2 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaOextraordinario.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Extraordinário</div>
+                        <div class="livro-autor">R.J. Palacio</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 3 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaAselecao.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">A Seleção</div>
+                        <div class="livro-autor">Kiera Cass</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 4 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/Mrs. Dalloway.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Mrs. Dalloway</div>
+                        <div class="livro-autor">Virginia Woolf</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 5 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/Cinderella.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Cinderella</div>
+                        <div class="livro-autor">Charles Perrault</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 6 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/aRevolucao.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">A Revolução dos Bichos</div>
+                        <div class="livro-autor">George Orwell</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 7 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/Penguim.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Penguin Classics</div>
+                        <div class="livro-autor">Vários Autores</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 8 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaOcemiterio.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Cemitério</div>
+                        <div class="livro-autor">Stephen King</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 9 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaAnne.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Anne de Green Gables</div>
+                        <div class="livro-autor">L.M. Montgomery</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 10 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaArainhaSol.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">A Rainha do Sol</div>
+                        <div class="livro-autor">Título Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 11 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaASOMBRA.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">A Sombra</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 12 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaExorcista.webp')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Exorcista</div>
+                        <div class="livro-autor">William Peter Blatty</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 13 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaExpressoOriente.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Expresso do Oriente</div>
+                        <div class="livro-autor">Agatha Christie</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 14 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaFrankenstein.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Frankenstein</div>
+                        <div class="livro-autor">Mary Shelley</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 15 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaIT.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">It - A Coisa</div>
+                        <div class="livro-autor">Stephen King</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 16 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaMaldicaoCigano.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">A Maldição Cigana</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 17 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaMarEsmeralda.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Mar Esmeralda</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 18 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaMisery.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Misery</div>
+                        <div class="livro-autor">Stephen King</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 19 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaMonstors.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Monstros</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 20 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaOiluminado.webp')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Iluminado</div>
+                        <div class="livro-autor">Stephen King</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 21 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaAmigoImaginario.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Amigo Imaginário</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 22 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaOpaciente.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Paciente</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 23 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaOweKing.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Owe King</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 24 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaScarlets.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Scarlets</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 25 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaSOICHI.jpg')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Soichi</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 26 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaAescolha.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">A Escolha</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 27 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaAlice.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">Alice no País das Maravilhas</div>
+                        <div class="livro-autor">Lewis Carroll</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 28 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaDetetive.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Detetive</div>
+                        <div class="livro-autor">Autor Desconhecido</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 29 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaOextraordinario.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">O Extraordinário</div>
+                        <div class="livro-autor">R.J. Palacio</div>
+                    </div>
+                </div>
+                
+                <!-- Livro 30 -->
+                <div class="livro-card">
+                    <div class="livro-capa" style="background-image: url('img/capaAselecao.png')"></div>
+                    <div class="livro-info">
+                        <div class="livro-titulo">A Seleção</div>
+                        <div class="livro-autor">Kiera Cass</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paginacao">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+            </div>
+        </section>
+        <!--FIM DA EXIBIÇÃO DE LIVROS-->
+    </main>
+
+
+    </main>
+
+    <div class="propaganda-container">
+        <div class="divisor-menu"></div>
+        <div class="propaganda-content">
+            <div class="social-icons">
+                <i class="bi bi-instagram propaganda-icon"></i><br>
+                <i class="bi bi-twitter-x propaganda-icon"></i>
+            </div>
+            <img class="propaganda" src="img/Captura de Tela (344).png" alt="Propaganda">
+        </div>
+    </div>
+
+    <!-- Modal e Snackbar -->
+    <div class="confirm-modal" id="confirm-modal">
+        <div class="modal-content">
+            <p>Tem certeza que deseja remover este item?</p>
+            <div class="modal-actions">
+                <button class="btn-cancel">Cancelar</button>
+                <button class="btn-confirm">Remover</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="snackbar" id="snackbar">
+        <span>Item removido com sucesso</span>
+        <button class="btn-undo" id="btn-undo">Desfazer</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

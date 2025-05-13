@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selecione seu Gênero</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="conteiner" id="mainContainer">
+    <div class="candle-light" id="candleLight"></div>
+    <h3 class="genre-title">Selecione seu gênero favorito</h3>
+    
+    <div class="genre-grid">
+      <button class="genre-button" data-genre="ficcao">Ficção</button>
+      <button class="genre-button" data-genre="comedia">Comédia</button>
+      <button class="genre-button" data-genre="romance">Romance</button>
+      <button class="genre-button" data-genre="terror">Terror</button>
+      <button class="genre-button" data-genre="darkromance">Dark Romance</button>
+      <button class="genre-button" data-genre="misterio">Mistério</button>
+      <button class="genre-button" data-genre="autoajuda">Autoajuda</button>
+    </div>
+
+    <button class="btn" onclick="salvarPreferencias()">Salvar Preferências</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
