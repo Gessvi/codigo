@@ -2,12 +2,14 @@
 
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css');
 
+/*LOGIN*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -16,17 +18,21 @@ body {
     background-image: url(img/capa.png);
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background 0.3s ease;
 }
-/*LOGIN*/
+
+
 .conteiner {
-    backdrop-filter: blur(20px);
-    padding: 50px 70px;
+    backdrop-filter: blur(15px);
+    padding: 40px 70px;
     border-radius: 12px;
     box-shadow: 2px 2px 10px #000;
     color: #fff;
     text-align: center;
     position: relative;
     background-color: #b0885542;
+    transition: all 0.3s ease;
+    
 }
 
 .icon-funcionario{
@@ -34,6 +40,64 @@ body {
     font-size: 42px;
     text-decoration: none;
 }
+
+.input-container {
+    position: relative;
+    width: 300px;
+    margin-bottom: 25px;
+}   
+
+.input-container:first-child {
+    margin-bottom: 10px;
+}
+
+.input-container:last-child {
+    margin-bottom: 5px;
+}
+
+.input-field {
+    border: 1px solid #fff;
+    padding: 15px 15px 15px 48px; 
+    width: 100%;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.input-field:focus {
+    border-color: #fde5cf;
+    
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4A3622;
+    font-size: 14px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
 
 .conteiner-formulario{
     backdrop-filter: blur(20px);
@@ -43,22 +107,29 @@ body {
     color: #fff;
     text-align: center;
 }
+
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
+    align-items: center;
 }
+
 input {
     background-color: transparent;
     border: none;
+    color: #fff;
 }
+
 input::placeholder {
     color: #ffffffce;
     font-size: 16px;
 }
+
 input:focus {
     outline: none;
 }
+
 .input-box {
     border: 1px solid #fff;
     padding: 12px;
@@ -67,70 +138,271 @@ input:focus {
     display: flex;
     justify-content: space-between;
 }
-.input-box-email{
-    border: 1px solid #fff;
-    padding: 12px;
-    width: 300px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-.input-box-senha{
-    border: 1px solid #fff;
-    padding: 12px;
-    width: 300px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-}
+
+
+
 .btn {
     display: inline-block; 
-    padding: 18px 30px;
-    background-color: #fde5cf;
-    color: black; 
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #5a3814; 
     text-decoration: none; 
     border-radius: 10px;
     font-weight: 600;
     border: none; 
     text-align: center;
     transition: all 0.2s ease-in-out;
-    margin-top: 23px;
-    font-size: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    position: relative;
+    top: 2px;
 } 
+
 .btn:hover {
-    background-color: #ffffffab; 
+    background-color: #fdd7b3ab; 
+}
+
+.cadastro-link {
+    margin-top: 15px;
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+    
+}
+
+.cadastro-link p {
+    margin: 0; 
 }
 
 .lembrar {
     display: flex;
     font-size: 12px;
     text-align: left;
-    margin-top: 18px;
+    margin-top: 5px;
     gap: 8px;
+    width: 100%;
+    max-width: 300px; 
+    justify-content: space-between; 
+    margin: 10px 0;
+    position: relative;
+    top: -35px; 
+    margin-bottom: -5px;
+    align-items: center;
+    position: relative;
+    top: -36px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.lembrar input[type="checkbox"] {
+    margin: 0;          
+    transform: translateY(-1px); 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #fcf9f7 !important;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+}
+
+.lembrar input[type="checkbox"]:checked {
+    background-color: #fcf9f7;
 }
 
 .click {
     text-decoration: none;
-    color: #00af58;
+    color: #04ceac;
     font-weight: 600;
     transition: all 0.2s ease-in-out;
 }
+
 .click:hover {
-    color: #ffffffb9;
+    color: #06b46cb9;
 }
-fieldset {
-    outline: none;
-    border: none;
+
+.dark-mode {
+    background-image: url(img/capaLoginESCURO.png);
+    background-color: #121212;
 }
-label {
-    text-align: left;
+
+.dark-mode .conteiner {
+    backdrop-filter: blur(15px);
+    padding: 40px 70px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #000;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-color: rgba(61, 54, 45, 0.336);
+    transition: all 0.3s ease;
 }
-.inputUser:focus~.labelInput,
-.inputUser:valid~.labelInput {
-    top: -20%;
-    font-size: 12px;
-    color: #DE9151;
+
+
+.dark-mode input::placeholder {
+    color: #cccccc;
 }
+
+.dark-mode .btn {
+    background-color: #301402bd;
+    color: #fde5cf;
+}
+
+.dark-mode .btn:hover {
+    background-color: #664a2f;
+}
+
+.dark-mode .click {
+    color: #32ddc0;
+}
+
+.dark-mode .click:hover {
+    color: #06b46cb9;
+}
+
+.dark-mode .logo {
+    background-color: #fde5cf;
+    border-color: #fde5cf;
+}
+
+.dark-mode .logo i {
+    color: #4A3622;
+}
+
+.dark-mode .input-field {
+    border-color: #fde5cf;
+}
+
+.dark-mode .input-icon {
+    background-color: #fde5cf;
+    color: #4A3622;
+}
+
+.dark-mode .password-toggle {
+    color: #fde5cf;
+}
+
+.dark-mode .lembrar input[type="checkbox"] {
+    border-color: #fde5cf !important; /* Borda marrom no dark mode */
+}
+
+.dark-mode .lembrar input[type="checkbox"]:checked {
+    background-color: #fde5cf;
+}
+
+.dark-mode .social-text {
+    color: #fde5cf;
+}
+
+.dark-mode .social-icon.google {
+    background-color: #fde5cf;
+}
+
+.dark-mode .social-icon.facebook {
+    background-color: #fde5cf;
+}
+
+/* fim do dark mode*/
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 10;
+}
+
+.dark-mode .theme-toggle {
+    color: #fde5cf;
+}
+
+.logo {
+border: 2px solid #fff;
+border-radius: 50%;
+background-color: #fff;
+margin-bottom: 25px;
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: -5px;
+}
+
+.lembrar .click {
+    margin-right: auto;  /* Empurra o link para a esquerda */
+    margin-left: 74px;   /* Espaço entre o checkbox e o link */
+}
+
+.theme-toggle i {
+font-size: 2rem !important;  /* Tamanho original: 1.5rem */
+transition: all 0.3s ease;   /* Efeito suave ao mudar de tamanho */
+}
+
+.social-login {
+margin-top: 10px;
+position: relative;
+top: -30px;
+}
+
+.social-text {
+font-size: 13px;
+color: #ffffffce;
+margin-bottom: 10px;
+position: relative;
+top: 15px;
+}
+
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 15px;
+
+}
+
+.social-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+text-decoration: none;
+transition: all 0.3s ease;
+margin-top: 20px; 
+transform: translateY(10px); 
+}
+
+.social-icon i {
+font-size: 28px !important;
+}
+
+.social-icon.google {
+background-color: #fff; 
+color: rgb(63, 37, 20);
+}
+
+.social-icon.facebook {
+background-color: #fff; 
+color: rgb(63, 37, 20);
+}
+
+.social-icon:hover {
+transform: translateY(-3px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /*CADASTRO 02*/
 
 .genre-container {

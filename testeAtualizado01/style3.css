@@ -101,6 +101,182 @@ h1 {
     font-weight: 600;
 }
 
+theme-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-option {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #C9A98C;
+    background-color: white;
+    color: #30241A;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.theme-option.active {
+    background-color: #02542D;
+    color: white;
+    border-color: #02542D;
+}
+
+.theme-option:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode .profile-content {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .section {
+    background-color: #422e184d;
+    border-color: #444;
+}
+
+.dark-mode .section-title {
+    color: #12aaaa;
+    border-color: #444;
+}
+
+.dark-mode .setting-label,
+.dark-mode .setting-value {
+    color: #e0e0e0;
+}
+
+.dark-mode .action-button {
+    color: #12aaaa;
+}
+
+.dark-mode .action-button:hover {
+    color: #12aaaa;
+}
+
+.dark-mode .action-button.danger {
+    color: #f44336;
+}
+
+.dark-mode .modal-content {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.dark-mode .modal-title {
+    color: #12aaaa;
+}
+
+.dark-mode .modal-message {
+    color: #e0e0e0;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea,
+.dark-mode .form-group select {
+    background-color: #3d3d3d;
+    border-color: #444;
+    color: #f0f0f0;
+}
+
+.dark-mode .profile-content h1 {
+    color: #12aaaa; 
+}
+
+.dark-mode .theme-option {
+    color: #f0f0f0;
+    border-color: #555;
+    background-color: #333;
+}
+
+.dark-mode .theme-option.active {
+    background-color: #12aaaa;
+    color: white;
+}
+
+.dark-mode .switch .slider {
+    background-color: #555;
+}
+
+.dark-mode .switch input:checked + .slider {
+    background-color: #12aaaa;
+}
+
+.dark-mode .setting-label {
+    color: #f0f0f0 !important;
+}
+
+.dark-mode .form-group label{
+    color: #f0f0f0;
+}
+
+.dark-mode .modal-btn-confirm{
+    background-color: #105a5a;
+}
+
+.dark-mode .modal-btn-cancel{
+    background-color: #493323;
+    color: rgb(253, 253, 253);
+}
+
+.dark-mode #terms-modal h4 {
+    color: #12aaaa !important;
+}
+
+.dark-mode .theme-toggle{
+    background-color: #105a5a;
+}
+
+.dark-mode .back-button{
+    background-color: #105a5a;
+}
+
+.dark-mode .toast{
+    background-color: #105a5a;
+}
+
+.theme-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-option {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #C9A98C;
+    background-color: white;
+    color: #30241A;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.theme-option.active {
+    background-color: #02542D;
+    color: white;
+    border-color: #02542D;
+}
+
+.theme-option:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+.dark-mode .theme-option {
+    color: #f0f0f0;
+    border-color: #555;
+    background-color: #333;
+}
+
+.dark-mode .theme-option.active {
+    background-color: #12aaaa;
+    color: white;
+}
+
 .setting-item {
     display: flex;
     justify-content: space-between;

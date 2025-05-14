@@ -305,6 +305,8 @@ ul li.item-menu a {
     z-index: 5; 
 }
 
+/*Categorias */
+
 .categoria .lista-tipos ul {
     list-style-type: none; 
     padding: 0; 
