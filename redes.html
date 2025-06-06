@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #e6d4c0;
+            padding: 20px;
+        }
+
+        .interface {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .team-section {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #4A3622;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: #8a4d1e;
+            font-size: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            border: 3px solid #8a4d1e;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative; /* Adicionado para posicionamento absoluto da foto */
+            display: flex; /* Centraliza a foto vertical e horizontalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            background-color: #f0f0f0; /* Cor de fundo caso a imagem não carregue */
+        }
+
+        .member-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            position: absolute; /* Permite melhor controle do posicionamento */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+        }
+
+        .team-member:hover .member-photo {
+            transform: translate(-50%, -50%) scale(1.05); /* Mantém o centro ao escalar */
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            color: #4A3622;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .member-role {
+            color: #8a4d1e;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .member-social {
+            margin-top: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4A3622;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+
+        .social-link.instagram:hover {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+        }
+
+        .social-link.github:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .social-link.linkedin:hover {
+            background-color: #0077B5;
+            color: white;
+        }
+
+        .social-link.twitter:hover {
+            background-color: #1DA1F2;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .section-subtitle {
+                font-size: 18px;
+            }
+            
+            .photo-container {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="interface">
+        <section class="team-section">
+            <h1 class="section-title">Nosso Time</h1>
+            <p class="section-subtitle">Conheça os profissionais que fazem acontecer</p>
+            
+            <div class="team-grid" id="teamMembers"></div>
+        </section>
+    </div>
+
+    <script>
+        // Dados dos membros da equipe com fotos locais
+        const teamMembers = [
+            {
+                name: "Gessica Vitoria Vasconcelos",
+                role: "Diretora do Projeto | Front-End",
+                photo: "img/avatargessica02.jpg",
+                social: [
+                    { platform: "github", url: "https://github.com/Gessvi" },
+                    { platform: "linkedin", url: "https://www.linkedin.com/in/gessica-vasconcelos-38087318b/" }
+                ]
+            },
+            {
+                name: "Maria Eduarda Chaves",
+                role: "Design | Arquivista",
+                photo: "img/avatarmaria.jpg",
+                social: [
+                    { platform: "github", url: "https://github.com/7Mari" }
+                ]
+            },
+            {
+                name: "Pedro Henrique A.",
+                role: "Analista de Testes | DBA",
+                photo: "img/avatarpedro.jpg",
+                social: [
+                    { platform: "github", url: "http://github.com/Pdr-h" },
+                    { platform: "linkedin", url: "http://www.linkedin.com/in/pedro-henrique-almeida-bispo-dos-santos-74963927a" }
+                ]
+            },
+            {
+                name: "Akira Sanana",
+                role: "Auxiliar Assistente",
+                photo: "img/avatarakira.jpg",
+                social: [
+                    { platform: "github", url: "https://github.com/akirasanana" }
+                ]
+            }
+        ];
+
+        // Função para renderizar os membros da equipe
+        function renderTeamMembers() {
+            const teamGrid = document.getElementById('teamMembers');
+            
+            teamMembers.forEach(member => {
+                const memberElement = document.createElement('div');
+                memberElement.className = 'team-member';
+                
+                // Mapeamento de ícones para plataformas
+                const platformIcons = {
+                    'instagram': 'fab fa-instagram',
+                    'github': 'fab fa-github',
+                    'linkedin': 'fab fa-linkedin-in',
+                    'twitter': 'fab fa-twitter'
+                };
+                
+                // Gerar links de redes sociais
+                const socialLinks = member.social.map(social => `
+                    <a href="${social.url}" target="_blank" class="social-link ${social.platform}">
+                        <i class="${platformIcons[social.platform]}"></i>
+                    </a>
+                `).join('');
+                
+                memberElement.innerHTML = `
+                    <div class="photo-container">
+                        <img src="${member.photo}" alt="${member.name}" class="member-photo" 
+                             onerror="this.src='img/default-avatar.jpg'">
+                    </div>
+                    <h3 class="member-name">${member.name}</h3>
+                    <p class="member-role">${member.role}</p>
+                    <div class="member-social">
+                        <div class="social-links">
+                            ${socialLinks}
+                        </div>
+                    </div>
+                `;
+                
+                teamGrid.appendChild(memberElement);
+            });
+        }
+
+        // Inicializa quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', renderTeamMembers);
+    </script>
+</body>
+</html>
